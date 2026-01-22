@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Request housing support services from Aurielle Solutions in Connecticut.">
+    <title>Request Services - Aurielle Solutions</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="logo.png" alt="Aurielle Solutions">
+                </div>
+                <nav class="nav" id="mainNav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="who-we-serve.html" class="nav-link">Who We Serve</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Request Services</h1>
+                <p class="hero-subtitle">We're here to support you on your housing journey</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="form-container">
+                <p style="margin-bottom: 2rem; color: var(--color-gray); line-height: 1.7;">
+                    Thank you for reaching out. The information you provide will help us understand your situation and connect you with the right support. All information is confidential and will be handled with care and respect.
+                </p>
+
+                <div class="form-success" id="intakeSuccess">
+                    <strong>Thank you!</strong> Your request has been submitted successfully. A member of our team will reach out to you within 1-2 business days using your preferred contact method.
+                </div>
+
+                <form id="intakeForm" novalidate>
+                    <h2 style="margin-bottom: 2rem;">Your Information</h2>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label required" for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" class="form-input" required>
+                            <div class="form-error">Please enter your first name</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label required" for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" class="form-input" required>
+                            <div class="form-error">Please enter your last name</div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="dob">Date of Birth</label>
+                            <input type="date" id="dob" name="dob" class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label required" for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" required>
+                            <div class="form-error">Please enter a valid phone number</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label required" for="safeContact">Safe Contact Method</label>
+                        <select id="safeContact" name="safeContact" class="form-select" required>
+                            <option value="">Select preferred contact method...</option>
+                            <option value="phone">Phone call</option>
+                            <option value="text">Text message</option>
+                            <option value="email">Email</option>
+                            <option value="voicemail">Voicemail is safe</option>
+                        </select>
+                        <div class="form-error">Please select a contact method</div>
+                    </div>
+
+                    <h2 style="margin: 3rem 0 2rem;">Housing Situation</h2>
+
+                    <div class="form-group">
+                        <label class="form-label required" for="currentHousingStatus">Current Housing Status</label>
+                        <select id="currentHousingStatus" name="currentHousingStatus" class="form-select" required>
+                            <option value="">Select your current situation...</option>
+                            <option value="homeless">Currently homeless</option>
+                            <option value="at-risk">At risk of losing housing</option>
+                            <option value="temporary">Staying in temporary housing</option>
+                            <option value="shelter">Staying in shelter</option>
+                            <option value="unsafe">In unsafe housing</option>
+                            <option value="transitioning">Transitioning from institution/program</option>
+                            <option value="seeking">Seeking first independent housing</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div class="form-error">Please select your housing status</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label required" for="housingNeeds">What housing support do you need?</label>
+                        <textarea id="housingNeeds" name="housingNeeds" class="form-textarea" required placeholder="Please tell us about your housing situation and what kind of help you're looking for..."></textarea>
+                        <div class="form-error">Please describe your needs</div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="householdSize">Household Size</label>
+                            <input type="number" id="householdSize" name="householdSize" class="form-input" min="1" placeholder="Number of people">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="hasChildren">Do you have children in your household?</label>
+                            <select id="hasChildren" name="hasChildren" class="form-select">
+                                <option value="">Select...</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="incomeRange">Monthly Household Income Range</label>
+                            <select id="incomeRange" name="incomeRange" class="form-select">
+                                <option value="">Select range...</option>
+                                <option value="none">No income</option>
+                                <option value="under-1000">Under $1,000</option>
+                                <option value="1000-2000">$1,000 - $2,000</option>
+                                <option value="2000-3000">$2,000 - $3,000</option>
+                                <option value="over-3000">Over $3,000</option>
+                                <option value="prefer-not">Prefer not to say</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="employmentStatus">Employment Status</label>
+                            <select id="employmentStatus" name="employmentStatus" class="form-select">
+                                <option value="">Select status...</option>
+                                <option value="employed-full">Employed full-time</option>
+                                <option value="employed-part">Employed part-time</option>
+                                <option value="unemployed">Unemployed</option>
+                                <option value="disabled">Unable to work (disability)</option>
+                                <option value="retired">Retired</option>
+                                <option value="student">Student</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="servicesInterested">Which services are you interested in? (Select all that apply)</label>
+                        <div style="display: grid; gap: 0.5rem; margin-top: 0.5rem;">
+                            <div class="form-checkbox">
+                                <input type="checkbox" id="service1" name="services" value="housing-navigation">
+                                <label for="service1">Housing Navigation</label>
+                            </div>
+                            <div class="form-checkbox">
+                                <input type="checkbox" id="service2" name="services" value="stabilization">
+                                <label for="service2">Stabilization Support</label>
+                            </div>
+                            <div class="form-checkbox">
+                                <input type="checkbox" id="service3" name="services" value="independent-living">
+                                <label for="service3">Independent Living Skills</label>
+                            </div>
+                            <div class="form-checkbox">
+                                <input type="checkbox" id="service4" name="services" value="transitional">
+                                <label for="service4">Transitional Support</label>
+                            </div>
+                            <div class="form-checkbox">
+                                <input type="checkbox" id="service5" name="services" value="referrals">
+                                <label for="service5">Resource Referrals</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="additionalInfo">Additional Information</label>
+                        <textarea id="additionalInfo" name="additionalInfo" class="form-textarea" placeholder="Anything else you'd like us to know..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            <label for="consent">
+                                I consent to Aurielle Solutions collecting and using this information to provide housing support services. I understand my information will be kept confidential. <span style="color: var(--color-error);">*</span>
+                            </label>
+                        </div>
+                        <div class="form-error">Consent is required to submit</div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 2rem;">Submit Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Our Mission</h4>
+                    <p>Supporting individuals and families in Connecticut on their journey to stable, independent housing through compassionate guidance and comprehensive services.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Service Area</h4>
+                    <p>Serving communities throughout Connecticut</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>
+                        Email: <a href="mailto:info@auriellesolutions.com">info@auriellesolutions.com</a><br>
+                        Phone: <a href="tel:+18605551234">(860) 555-1234</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Aurielle Solutions. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="privacy.html#terms">Terms of Service</a>
+                </div>
+                <p class="disclaimer">This is not an emergency service. If you are in immediate danger, please call 911.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/supabase-config.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/forms.js"></script>
+</body>
+</html>

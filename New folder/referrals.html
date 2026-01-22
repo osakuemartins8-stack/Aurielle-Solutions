@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Refer a client to Aurielle Solutions housing support services in Connecticut.">
+    <title>Make a Referral - Aurielle Solutions</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="logo.png" alt="Aurielle Solutions">
+                </div>
+                <nav class="nav" id="mainNav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="who-we-serve.html" class="nav-link">Who We Serve</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Make a Referral</h1>
+                <p class="hero-subtitle">Help connect someone with housing support services</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-success" id="referralSuccess">
+                    <strong>Thank you!</strong> Your referral has been submitted successfully. We will review the information and reach out soon.
+                </div>
+
+                <form id="referralForm" novalidate>
+                    <h2 style="margin-bottom: 2rem;">Agency/Referrer Information</h2>
+                    
+                    <div class="form-group">
+                        <label class="form-label required" for="agencyName">Agency/Organization Name</label>
+                        <input type="text" id="agencyName" name="agencyName" class="form-input" required>
+                        <div class="form-error">Please enter your agency name</div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label required" for="agencyContactName">Your Name</label>
+                            <input type="text" id="agencyContactName" name="agencyContactName" class="form-input" required>
+                            <div class="form-error">Please enter your name</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label required" for="agencyEmail">Your Email</label>
+                            <input type="email" id="agencyEmail" name="agencyEmail" class="form-input" required>
+                            <div class="form-error">Please enter a valid email</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label required" for="agencyPhone">Your Phone Number</label>
+                        <input type="tel" id="agencyPhone" name="agencyPhone" class="form-input" required>
+                        <div class="form-error">Please enter a valid phone number</div>
+                    </div>
+
+                    <h2 style="margin: 3rem 0 2rem;">Client Information</h2>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label required" for="clientFirstName">Client First Name</label>
+                            <input type="text" id="clientFirstName" name="clientFirstName" class="form-input" required>
+                            <div class="form-error">Required field</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label required" for="clientLastName">Client Last Name</label>
+                            <input type="text" id="clientLastName" name="clientLastName" class="form-input" required>
+                            <div class="form-error">Required field</div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="clientDOB">Client Date of Birth</label>
+                            <input type="date" id="clientDOB" name="clientDOB" class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="clientPhone">Client Phone Number</label>
+                            <input type="tel" id="clientPhone" name="clientPhone" class="form-input">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="clientEmail">Client Email (if available)</label>
+                        <input type="email" id="clientEmail" name="clientEmail" class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label required" for="housingStatus">Current Housing Status</label>
+                        <select id="housingStatus" name="housingStatus" class="form-select" required>
+                            <option value="">Select status...</option>
+                            <option value="homeless">Currently homeless</option>
+                            <option value="at-risk">At risk of homelessness</option>
+                            <option value="temporary">Temporary housing</option>
+                            <option value="transitional">Transitional housing</option>
+                            <option value="unstable">Unstable housing</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div class="form-error">Please select housing status</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label required" for="servicesNeeded">Services Needed</label>
+                        <textarea id="servicesNeeded" name="servicesNeeded" class="form-textarea" required placeholder="Please describe what services the client needs..."></textarea>
+                        <div class="form-error">Please describe services needed</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="additionalInfo">Additional Information</label>
+                        <textarea id="additionalInfo" name="additionalInfo" class="form-textarea" placeholder="Any other relevant information about the client's situation..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            <label for="consent">
+                                I confirm that I have obtained the client's consent to share their information with Aurielle Solutions for the purpose of providing housing support services. <span style="color: var(--color-error);">*</span>
+                            </label>
+                        </div>
+                        <div class="form-error">Consent is required to submit referral</div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 2rem;">Submit Referral</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Our Mission</h4>
+                    <p>Supporting individuals and families in Connecticut on their journey to stable, independent housing through compassionate guidance and comprehensive services.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Service Area</h4>
+                    <p>Serving communities throughout Connecticut</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>
+                        Email: <a href="mailto:info@auriellesolutions.com">info@auriellesolutions.com</a><br>
+                        Phone: <a href="tel:+18605551234">(860) 555-1234</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Aurielle Solutions. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="privacy.html#terms">Terms of Service</a>
+                </div>
+                <p class="disclaimer">This is not an emergency service. If you are in immediate danger, please call 911.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/supabase-config.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/forms.js"></script>
+</body>
+</html>

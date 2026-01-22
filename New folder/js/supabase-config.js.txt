@@ -1,0 +1,31 @@
+// Aurielle Solutions - Supabase Configuration
+
+// IMPORTANT: Replace these with your actual Supabase credentials
+// Get these from your Supabase project settings
+const SUPABASE_URL = 'YOUR_SUPABASE_URL_HERE'; // e.g., 'https://xxxxx.supabase.co'
+const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY_HERE'; // Your anon/public key
+
+// Initialize Supabase client
+const supabase = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY) : null;
+
+// Check if Supabase is configured
+if (!supabase || SUPABASE_URL === 'YOUR_SUPABASE_URL_HERE') {
+    console.warn('Supabase is not configured. Please update js/supabase-config.js with your credentials.');
+}
+
+/* 
+SETUP INSTRUCTIONS:
+
+1. Go to https://supabase.com and create a free account
+2. Create a new project (name it 'aurielle-solutions')
+3. Wait for the project to be set up (takes about 2 minutes)
+4. Go to Project Settings > API
+5. Copy your Project URL and paste it as SUPABASE_URL above
+6. Copy your anon/public key and paste it as SUPABASE_ANON_KEY above
+7. Go to SQL Editor in Supabase dashboard
+8. Run the SQL schema provided in the setup documentation
+9. Save this file
+
+IMPORTANT: Never commit or share files containing your actual API keys.
+This file should be configured on your server only.
+*/
